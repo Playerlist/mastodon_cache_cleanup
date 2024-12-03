@@ -16,6 +16,12 @@ echo "Media cleanup done." >> "$LOG_FILE"
 /usr/local/bin/docker-compose run --rm web bundle exec bin/tootctl preview_cards remove >> "$LOG_FILE" 2>&1
 echo "Preview cards cleanup done." >> "$LOG_FILE"
 
+/usr/local/bin/docker-compose run --rm web bundle exec bin/tootctl emoji purge --remote-only >> "$LOG_FILE" 2>&1
+echo “Remote Emoji cleanup done." >> "$LOG_FILE"
+
+/usr/local/bin/docker-compose run --rm web bundle exec bin/tootctl media remove-orphans >> "$LOG_FILE" 2>&1
+echo “Media cache orphans cleanup done." >> "$LOG_FILE"
+
 echo "Done cleaning up" >> "$LOG_FILE"
 
 # Read the log file to prepare the Discord message
