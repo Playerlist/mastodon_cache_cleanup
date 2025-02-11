@@ -19,6 +19,7 @@ Afterwards it will write it into a logfile called: cleanup_log.txt
 For perfect use, create a cronjob like this:
 
 This runs the Script once per Day at midnight. 
+
 sudo crontab -e 
 
 0 0 * * * cd /path_to_project/mastodon && ./cleanup.sh >> /path_to_project/mastodon/cleanuplog.txt 2>&1
