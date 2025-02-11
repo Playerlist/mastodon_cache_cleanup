@@ -2,7 +2,7 @@
 
 # Variables
 LOG_FILE="cleanuplog.txt"
-DISCORD_WEBHOOK="https://discord.com/api/webhooks/1313483110012158012/UN_zJp7jji57u1zkAUx6HWFgpI1y8GqXv3D6sI_oF2JiIS0PQo0F9uC2lb7gO3QD0p83"
+DISCORD_WEBHOOK="https://discord.com/api/webhooks/"
 
 # Log the current date and time
 current_date_time=$(date)
